@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Tomato: Tomato;
+    --Orange: Orange;
+    --DodgerBlue: DodgerBlue;
+    --MediumSeaGreen: MediumSeaGreen;
+    --Gray: Gray;
+    --SlateBlue: SlateBlue;
+    --Violet: Violet;
+    --LightGray: LightGray;
+    --RED: RED;
+    --BLUE: BLUE;
+    --black: black;
+    --gradient: linear-gradient(to bottom right, red, yellow);
+    --btn-color: MediumSeaGreen;
+    --shodaw: Gray;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, Tahoma, sans-serif;
+    color: var(--Gray);
+}
+
+h1 {
+    font-size: 6rem;
+    color: var(--Tomato);
+}
+
+h2,
+h3 {}
+
+h3 {}
+
+h4 {}
+
+h5,
+h6 {
+    color: var(--DodgerBlue);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+}
+
+
+.grid-colom-tow {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.auther-data {
+    display: flex;
+    display: grid;
+    gap: 3rem;
+}
+
+.grid {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    display: grid;
+    gap: 3rem;
+}
+
+.col-1,
+.col-4,
+.col-5 {
+    text-align: center;
+}
+
+.col-4 img,
+.col-5 img {
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 0 30 var(--Gray);
+}
+
+.col-1 img {
+    width: 70%;
+    border-radius: 1rem;
+    box-shadow: -30px -30px 0 var(--BLUE);
+}
+
+.col-2,
+.col-6 {
+    margin-right: 3rem;
+}
+
+.col-3 {
+    margin-left: 3rem;
+}
+
+.col-3 .gap,
+.col-6 .gap {
+    margin: 2rem 0;
+}
+
+.col-3 p,
+.col-6,
+.self-intro p {
+    font-size: 1.5rem;
+}
+
+.col-3 a,
+.col-6 a {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.header-icon i {
+    margin: 1rem 3rem;
+    font-size: 6rem;
+}
+
+.header-icon img {
+    margin: 1rem 3rem;
+    width: 6rem;
+}
+
+/********************************
+index file index.html
+*****************************************/
+/*  navigation and header */
+.navigation {
+    background-color: var(--SlateBlue);
+    background-size: cover;
+    height: 30rem;
+}
+
+.nav-bar {
+    background-color: var(--DodgerBlue);
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+}
+.logo a img, .footer-logo a img{
+    width: 3rem;
+}
+.logo a, .footer-logo a{
+    background-color: var(--LightGray);
+    border-radius:5px;
+    font-size: 2rem;
+    display: flex;
+    color: var(--black);
+    padding: 5px 1rem;
+    gap: 0 1rem;
+    align-items: center;
+}
+.check-btn{
+    display: none;
+}
+.menu-header {
+    font-size: 2rem;
+}
+.menu-bar a:active:hover{
+    color: var(--Tomato);
+    text-decoration: overline;
+}
+.menu-header .menu-bar:hover  {
+    color: var(--Tomato);
+    text-decoration: overline;
+    transition: .5s;
+}
+
+.menu-bar {
+    margin: 0 1rem;
+    color: var(--LightGray);
+}
+
+.welcome {
+    text-align: center;
+    margin: 3rem 10rem;
+}
+
+.welcome p {
+    font-size: 2rem;
+    color: var(--LightGray);
+}
+
+/* about auther info */
+.title,
+.skill h2 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.title {
+    text-align: center;
+}
+
+.self-intro {
+    margin: 2rem 0;
+}
+
+.self-intro h2 {
+    margin: .4rem 0;
+}
+
+.progres-bar {
+    width: 90%;
+    height: .7rem;
+    position: relative;
+    background-color: var(--LightGray);
+    border-radius: 5rem;
+    box-shadow: 0 0 5px var(--shodaw);
+    margin: 1rem 0;
+}
+
+.progres-bar span {
+    background-color: var(--Tomato);
+    position: absolute;
+    width: 10%;
+    height: .7rem;
+    border-radius: 5rem;
+
+}
+.progres-bar.html span{
+    width: 80%;
+}
+
+.progres-bar.css span{
+    width: "50%";
+}
+
+.progres-bar.wordpress span{
+    width: "50%";
+}
+
+.progres-bar.bootstrap span{
+    width: "40%";
+}
+.progres-bar span::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: var(--black);
+}
+
+.progres-bar span::after {
+    position: absolute;
+   
+    right: 0;
+    top: -28px;
+    color: var(--LightGray);
+    background-color: var(--black);
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progres-bar.html span::after {
+    content: "80%";
+}
+
+.progres-bar.css span::after {
+    content: "50%";
+}
+
+.progres-bar.wordpress span::after {
+    content: "50%";
+}
+
+.progres-bar.bootstrap span::after {
+    content: "40%";
+}
+
+.btn {
+    margin: 3rem 0;
+}
+
+.btn a {
+    background-color: var(--MediumSeaGreen);
+    color: var(--oreng);
+    border-radius: 5rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    box-shadow: 0px 0px 6px var(--Tomato);
+
+}
+
+.btn a:hover {
+    background-color: var(--SlateBlue);
+    border-radius: 5rem;
+    padding: .5rem 1rem;
+    color: var(--LightGray);
+}
+
+/*  */
+
+.col-3 a:hover {
+    color: var(--Orange);
+}
+
+.col-6 a:hover {
+    color: var(--Orange);
+}
+
+/* courses */
+.header-icon {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.row {
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    display: grid;
+    margin: 4rem 0;
+}
+
+.col-7 {
+    margin: 1rem 2rem;
+    background-color: var(--MediumSeaGreen);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px var(--Gray);
+    padding: 1rem 1rem;
+}
+
+.col-7 a {
+    font-size: 3rem;
+    display: flex;
+    gap: 0 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-7 a:hover {
+    color: var(--DodgerBlue);
+}
+
+.col-7:hover {
+    background-color: var(--LightGray);
+}
+
+/* footer info  */
+.footer {
+    background-color: var(--Gray);
+}
+
+.grid-colom-three {
+    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    display: grid;
+    gap: 2rem;
+}
+
+.col-8 {
+    margin: 5rem 3rem;
+    font-size: 3rem;
+}
+.list-info{
+    color: var(--LightGray); 
+    font-size: 3rem;
+     margin-bottom: 1rem;
+}
+.list li {
+    display: block;
+    font-size: 1.8rem;
+}
+
+.list a {
+    text-decoration: underline;
+}
+
+.col-8 .socel-media {
+    font-size: 3rem;
+    color: var(--Violet);
+}
+
+.socel a:hover {
+    color: var(--Tomato);
+}
+
+/********************************
+code file code.html
+*****************************************/
+/* code */
+/* course nav */
+.menu-code-bar {
+    background-color: rgb(12, 12, 12);
+    height: 4rem;
+    padding: 1rem 1rem;
+}
+
+.menu-code {
+    margin: 0rem 3rem;
+    font-size: 1.6rem;
+    color: white;
+}
+.menu-code:hover {
+    color: rgb(211, 116, 240);
+}
+/* course section */
+.side-bar {
+    overflow-y: scroll;
+    margin-top: -45rem;
+    width: 20rem;
+    height: 45rem;
+    padding: 1rem 1rem;
+}
+.side-list-menu h3 {
+    display: block;
+    margin-top: .5rem;
+     padding: 1rem 1rem;
+     color: var(--black);
+     background-color: var(--LightGray);
+     font-size: 2rem;
+     border-radius: 5px;
+}
+.side-list-menu a {
+   display: block;
+   margin-top: .5rem;
+    padding: 1rem 1rem;
+    background-color: var(--LightGray);
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.side-list-menu a:hover {
+    color: var(--LightGray);
+     background-color: var(--Gray);
+    
+ }
+.course-learn {
+   margin-left: 21.3%;
+    width: 78.7%;
+    height: 45rem;
+    padding: 0 1rem;
+} 
